@@ -17,6 +17,7 @@ export interface LoginFailureAction {
   payload: string; // Error message
 }
 
+// Union type for all auth actions
 export type AuthActionTypes = LoginRequestAction | LoginSuccessAction | LoginFailureAction;
 
 export const loginRequest = (credentials: { username: string; password: string }): LoginRequestAction => ({
